@@ -10,7 +10,7 @@ class BatteryReceiver : BroadcastReceiver(){
     override fun onReceive(context: Context?, intent: Intent?) {
         if (intent?.action == Intent.ACTION_BATTERY_CHANGED) {
             val level = intent.getIntExtra("level", -1)
-            if (level <= 1) {
+            if (level <= 100) {
                 Toast.makeText(context, "⚠️ A bateria está em $level%! Vai se desligar em breve", Toast.LENGTH_LONG).show()
             }
         }

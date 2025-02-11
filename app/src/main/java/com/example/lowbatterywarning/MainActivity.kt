@@ -18,7 +18,6 @@ class MainActivity : ComponentActivity() {
             Toast.makeText(this,"Ative as notificações para receber alertas de bateria", Toast.LENGTH_LONG).show()
         }
 
-        // Regista o receiver para detectar mudanças de bateria
         batteryReceiver = BatteryReceiver()
         val intentFilter = IntentFilter(Intent.ACTION_BATTERY_CHANGED)
         registerReceiver(batteryReceiver, intentFilter)

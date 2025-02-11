@@ -15,7 +15,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         if (!areNotificationsEnabled(this)) {
-            Toast.makeText(this,"Ative as notificações para receber alertas de bateria", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"Enable app notifications to receive alerts (required)", Toast.LENGTH_LONG).show()
         }
 
         batteryReceiver = BatteryReceiver()

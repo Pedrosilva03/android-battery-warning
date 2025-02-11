@@ -31,7 +31,7 @@ class BootReceiver : BroadcastReceiver() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val channel = NotificationChannel(
                 "boot_channel",
-                "Notificação de Boot",
+                "Boot notification",
                 NotificationManager.IMPORTANCE_HIGH
             )
             notificationManager.createNotificationChannel(channel)
@@ -45,7 +45,7 @@ class BootReceiver : BroadcastReceiver() {
         val builder: NotificationCompat.Builder = NotificationCompat.Builder(context, "boot_channel")
             .setSmallIcon(R.mipmap.sym_def_app_icon)
             .setContentTitle("Low Battery Warning")
-            .setContentText("Toque para abrir a aplicação")
+            .setContentText("Click here to start the app")
             .setPriority(NotificationCompat.PRIORITY_HIGH)
             .setContentIntent(pendingIntent)
             .setAutoCancel(true)
